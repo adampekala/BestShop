@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    --bg_color: white;
+    --max_width: 1626px;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 49px;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    padding: 10px 0;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #08A6E4;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h4 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+label, input {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.pricing_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pricing_offers_box {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+.btn {
+    display: block;
+    padding: 20px 30px;
+    width: 300px;
+    background-color: #08A6E4;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.bar {
+    max-width: var(--max_width);
+    padding:0 200px;
+    margin: 0 Auto;
+    box-shadow: 0 3px 6px #00000029;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section, main {
+    max-width: var(--max_width);
+    background-color: var(--bg_color);
+    margin: 0 Auto;
+    display: flex;
+}
+
+main {
+    background-image: url("images/Background.png");
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    margin-top: 5px;
+    height: 850px;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.popularity {
+    flex-direction: column;
+    align-items: center;
+    height: 531px;
+    margin-bottom: 50px;
+}
+
+.popularity_articles {
+    display: flex;
+    gap: 20px;
+}
+
+.advantages {
+    background-color: #F7F7F7;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.advantages_top, .advantages_center, .advantages_bottom {
+    display: flex;
+    width: 1124px;
+    height: 251px;
+    margin: 0 Auto;
+    background-color: white;
+    padding: 10px 20px;
+
+}
+
+.pricing {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.pricing_offers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.questions {
+    padding: 200px;
+    justify-content: center;
+    gap: 50px;
+}
+
+form {
+    width: 440px;
+}
+
+.footer {
+    box-shadow: 0 -5px 40px #00000029;
+}
