@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    --bg_color: white;
+    --bg_color: #FFFFFF;
     --max_width: 1626px;
 }
 
@@ -18,7 +18,8 @@ h1 {
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 36px;
-    padding: 10px 0;
+    padding: 0;
+    font-weight: 400;
 }
 
 h3 {
@@ -35,6 +36,12 @@ h4 {
     padding: 20px 0;
 }
 
+h5  {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -77,15 +84,32 @@ ul {
     max-width: var(--max_width);
     padding:0 200px;
     margin: 0 Auto;
+    background-color: white;
     box-shadow: 0 3px 6px #00000029;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 600px;
     align-items: center;
+}
+
+.nav_menu li {
+    text-transform: uppercase;
+    padding: 30px 20px;
+    height: 65px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.whyUs:hover, .benefits:hover, .prices:hover, .contact:hover {
+    border-bottom: 4px solid #08A6E4;
 }
 
 section, main {
     max-width: var(--max_width);
     background-color: var(--bg_color);
+    box-shadow: 0 3px 6px #00000029;
     margin: 0 Auto;
     display: flex;
 }
@@ -105,12 +129,94 @@ main {
 .popularity {
     flex-direction: column;
     align-items: center;
-    height: 531px;
-    margin-bottom: 50px;
+    min-height: 531px;
+    margin-bottom: 0;
+    padding-top: 60px;
+}
+
+.popularity h2 {
+    text-align: center;
 }
 
 .popularity_articles {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 100px 0;
+}
+
+.popularity_articles_dot {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.popularity_articles_dot_left {
+    background-color: red;
+    position: relative;
+}
+
+.popularity_articles_dot_left::after {
+    content: "";
+    background-image: url("images/Person.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 30px;
+    width: 44px;
+    height: 52px;
+    aspect-ratio: 1;
+    position: absolute;
+}
+
+.popularity_articles_dot_center {
+    background-color: #08A6E4;
+    position: relative;
+}
+
+.popularity_articles_dot_center::after {
+    content: "";
+    background-image: url("images/Eye.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 20px;
+    top: 15px;
+    width: 65px;
+    height: 36px;
+    aspect-ratio: 1;
+    position: absolute;
+}
+
+.popularity_articles_dot_right {
+    background-color: #55DFB4;
+    position: relative;
+}
+
+.popularity_articles_dot_right::after {
+    content: "";
+    background-image: url("images/Catalog.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 30px;
+    top: 5px;
+    width: 52px;
+    height: 48px;
+    aspect-ratio: 1;
+    position: absolute;
+}
+.popularity_articles p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.popularity_articles_left, .popularity_articles_center, .popularity_articles_right {
+    width: 163px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
@@ -118,18 +224,126 @@ main {
     background-color: #F7F7F7;
     flex-direction: column;
     gap: 20px;
+    padding: 60px;
+}
+
+.advantages article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 416px;
 }
 
 .advantages_top, .advantages_center, .advantages_bottom {
     display: flex;
     width: 1124px;
-    height: 251px;
     margin: 0 Auto;
     background-color: white;
-    padding: 10px 20px;
-
+    padding: 91px 36px;
 }
 
+.advantages_top {
+    gap: 169px;
+}
+
+.advantages_center {
+    gap: 192px;
+}
+
+.advantages_bottom {
+    gap: 70px;
+}
+.advantages_bottom article {
+    width: 554px;
+}
+
+.advantages_underline {
+    width: 327px;
+    height: 4px;
+    margin-top: 20px;
+    background-color: red;
+}
+
+.advantages_top_underline {
+    background-color: #FB3B64;
+}
+
+.advantages_center_underline {
+    background-color: #07ACE6;
+}
+
+.advantages_bottom_underline {
+    background-color: #55DFB4;
+}
+
+img[alt="Computer"] {
+    display: block;
+    width: 386px;
+    height: 219px;
+    position: relative;
+}
+.advantages_top_computer {
+    position: relative;
+}
+
+.advantages_top_computer::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    position: absolute;
+    left: 200px;
+    top: -50px;
+    background-color: #FB3B64;
+    transform: rotate(-45deg);
+    z-index: 0;
+}
+
+img[alt="iPhone"] {
+    width: 426px;
+    height: 328px;
+    position: relative;
+}
+
+.advantages_center_iphone {
+    position: relative;
+}
+
+.advantages_center_iphone::before {
+    content: "";
+    display: block;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: -25px;
+    background-color: #08A6E4;
+    z-index: 0;
+}
+
+img[alt="trumpet"] {
+    width: 295px;
+    height: 207px;
+}
+
+.advantages_bottom article {
+    width: 632px;
+}
+.advantages_bottom_trumpet {
+    width: 440px;
+    height: 370px;
+    background-color: #55DFB4;
+    position: relative;
+}
+
+.advantages_bottom_trumpet img {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
 .pricing {
     margin-top: 50px;
     flex-direction: column;
