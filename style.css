@@ -63,8 +63,7 @@ ul {
 }
 
 .pricing_offers_box {
-    border: 1px solid red;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 .btn {
     display: block;
@@ -345,18 +344,68 @@ img[alt="trumpet"] {
     left: 50px;
 }
 .pricing {
-    margin-top: 50px;
+    margin-top: 0px;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 100px;
     padding-bottom: 40px;
+}
+
+.pricing h2 {
+    padding-bottom: 50px;
 }
 
 .pricing_offers {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
+}
+
+.pricing_offers_premium,
+.pricing_offers_basic,
+.pricing_offers_pro {
+    position: relative;
+    width: 372px;
+    height: 461px;
+    outline: 1px solid #07ACE6;
+    outline-offset: 0;
+}
+
+.pricing_offers_premium:hover,
+.pricing_offers_basic:hover,
+.pricing_offers_pro:hover {
+    outline-offset: 30px;
+    border-radius: 1px;
+    box-shadow: 40px 40px 8px grey;
+}
+
+.pricing_list li::marker {
+    content: url("images/Ckechmark-1.svg");
+    letter-spacing: 5px;
+}
+
+.pricing_list li span {
+    display: inline-block;
+    width: 10px;
+}
+
+.limited_offer {
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+.pricing_list li.pricing_list_negative::marker {
+    content: url("images/Close.svg");
+    letter-spacing: 5px;
+}
+
+.price_btn {
+    position: absolute;
+    bottom: -30px;
+    left: 35px;
 }
 
 .questions {
