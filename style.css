@@ -56,21 +56,23 @@ ul {
     display: flex;
 }
 
+.frame {
+    margin: 0 Auto;
+    max-width: 1626px;
+    box-shadow: 0 3px 6px #00000029;
+}
 .pricing_list {
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-.pricing_offers_box {
-    border-radius: 20px;
-}
 .btn {
     display: block;
-    padding: 20px 30px;
+    padding: 25px 30px;
     width: 300px;
     background-color: #08A6E4;
-    border-radius: 30px;
+    border-radius: 40px;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -108,7 +110,6 @@ ul {
 section, main {
     max-width: var(--max_width);
     background-color: var(--bg_color);
-    box-shadow: 0 3px 6px #00000029;
     margin: 0 Auto;
     display: flex;
 }
@@ -123,6 +124,16 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+}
+
+.main_btn {
+    background-color: #08A6E4;
+    width: 440px;
+    height: 67px;
+    box-shadow: 5px 10px 14px #07ACE629;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .popularity {
@@ -222,8 +233,8 @@ main {
 .advantages {
     background-color: #F7F7F7;
     flex-direction: column;
-    gap: 20px;
-    padding: 60px;
+    gap: 40px;
+    padding: 105px 0px;
 }
 
 .advantages article {
@@ -234,27 +245,45 @@ main {
     width: 416px;
 }
 
-.advantages_top, .advantages_center, .advantages_bottom {
+.advantages_top,
+.advantages_center {
     display: flex;
-    width: 1124px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1124px;
+    min-height: 370px;
     margin: 0 Auto;
     background-color: white;
-    padding: 91px 36px;
+    padding: 30px 36px;
 }
 
 .advantages_top {
-    gap: 169px;
+    column-gap: 246px;
+    row-gap: 150px;
+    padding: 104px 36px;
 }
 
 .advantages_center {
-    gap: 192px;
+    column-gap: 207px;
+    row-gap: 50px;
 }
 
 .advantages_bottom {
-    gap: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1124px;
+    margin: 0 Auto;
+    background-color: transparent;
+    gap: 50px;
+    padding: 0;
 }
 .advantages_bottom article {
     width: 554px;
+    background-color: white;
+    margin: 0;
+    padding: 60px 30px;
+
 }
 
 .advantages_underline {
@@ -308,6 +337,7 @@ img[alt="iPhone"] {
 
 .advantages_center_iphone {
     position: relative;
+    padding-top: 22px;
 }
 
 .advantages_center_iphone::before {
@@ -317,8 +347,8 @@ img[alt="iPhone"] {
     height: 330px;
     border-radius: 50%;
     position: absolute;
-    left: 0px;
-    top: -25px;
+    left: 0;
+    top: 0;
     background-color: #08A6E4;
     z-index: 0;
 }
@@ -330,6 +360,7 @@ img[alt="trumpet"] {
 
 .advantages_bottom article {
     width: 632px;
+    margin: 0;
 }
 .advantages_bottom_trumpet {
     width: 440px;
@@ -358,13 +389,31 @@ img[alt="trumpet"] {
 .pricing_offers {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
 }
 
-.pricing_offers_premium,
-.pricing_offers_basic,
-.pricing_offers_pro {
+.price_btn {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+}
+
+.price_btn--basic {
+    background-color: #EB476E;
+
+}
+.price_btn--pro {
+    background-color: #07ACE6;
+}
+
+.price_btn--premium {
+    background-color: #55DFB4;
+}
+
+.pricing_offers_box {
     position: relative;
     width: 430px;
     height: 600px;
@@ -374,20 +423,63 @@ img[alt="trumpet"] {
     border-radius: 50px;
 }
 
-.pricing_offers_premium:hover,
-.pricing_offers_basic:hover,
-.pricing_offers_pro:hover {
-    outline: 1px solid #07ACE6;
-    outline-offset: 0px;
+.pricing_offers_box:hover {
+
+    outline: none;
     border-radius: 20px;
+}
+
+.pricing_offers_box:hover > h3 {
+    padding-bottom: 20px;
+}
+
+.pricing_offers_box:hover > h4 {
+    padding-top: 0;
+}
+
+.pricing_offers_box:hover > .pricing_list {
+    gap: 30px;
+}
+
+.pricing_offers_box:hover > .price_btn {
+    bottom: -30px;
+    left: 140px;
+}
+
+.pricing_offers_basic {
+    outline-color: #EB476E;
+}
+
+.pricing_offers_basic:hover {
+    box-shadow: 0 0 15px 0 #EB476E;
+}
+
+.pricing_offers_premium {
+    outline-color: #55DFB4;
+}
+
+.pricing_offers_premium:hover {
+    box-shadow: 0 0 15px 0 #55DFB4;
+}
+
+.pricing_offers_pro {
+    outline-color: #07ACE6;
+}
+
+.pricing_offers_pro:hover {
     box-shadow: 0px 0px 15px 0px #07ACE6;
 }
 
-.pricing_offers_premium:hover > .pricing_list,
-.pricing_offers_basic:hover > .pricing_list,
-.pricing_offers_pro:hover > .pricing_list {
-    gap: 30px;
-}
+/*.price_btn {*/
+/*    width: 150px;*/
+/*    position: absolute;*/
+/*    bottom: -10px;*/
+/*    left: 140px;*/
+/*}*/
+
+/*.price_btn:hover {*/
+/*    width: 165px;*/
+/*}*/
 
 .pricing_list li::marker {
     content: url("images/Ckechmark-1.svg");
@@ -409,12 +501,6 @@ img[alt="trumpet"] {
 .pricing_list li.pricing_list_negative::marker {
     content: url("images/Close.svg");
     letter-spacing: 5px;
-}
-
-.price_btn {
-    position: absolute;
-    bottom: -30px;
-    left: 35px;
 }
 
 .questions {
@@ -512,15 +598,19 @@ span.checkbox {
     height: 57px;
     border: none;
     border-bottom: 1px solid #707070;
-    padding: 20px;
+    padding: 44px;
     font-size: 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    color: hsl(197deg 92% 25%);
     margin-bottom: 30px;
+    letter-spacing: 3px;
 }
 
 .input_name:focus {
     outline: none;
-    background-image: linear-gradient(#08A6E4,white 25%);
+    background-image: linear-gradient(hsl(198deg 100% 86%),white 60%);
+    color: hsl(197deg 92% 25%);
+
 }
 
 .question_btn {
