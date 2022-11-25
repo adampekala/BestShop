@@ -1,0 +1,26 @@
+{
+  "name": "bestshop",
+  "version": "1.0.0",
+  "description": "BestShop RWD",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss css/main.css",
+    "bs": "browser-sync start --server --files \"*.html, css/*.css\"",
+    "start":"npm-run-all --parallel sass bs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adampekala/BestShop.git"
+  },
+  "author": "Adam Pękala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adampekala/BestShop/issues"
+  },
+  "homepage": "https://github.com/adampekala/BestShop#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.1"
+  }
+}

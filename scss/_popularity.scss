@@ -1,0 +1,120 @@
+@import "var";
+
+.popularity {
+  max-width: $max_width;
+  flex-direction: column;
+  align-items: center;
+  min-height: 531px;
+  margin-bottom: 0;
+  padding-top: 60px;
+}
+
+.popularity h2 {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.popularity_articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  padding: 100px 0;
+}
+
+.popularity_articles_dot {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.popularity_articles_dot_left {
+  background-color: red;
+  position: relative;
+}
+
+.popularity_articles_dot_left::after {
+  content: "";
+  background-image: url("../images/Person.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 30px;
+  width: 44px;
+  height: 52px;
+  aspect-ratio: 1;
+  position: absolute;
+}
+
+.popularity_articles_dot_center {
+  background-color: #08A6E4;
+  position: relative;
+}
+
+.popularity_articles_dot_center::after {
+  content: "";
+  background-image: url("../images/Eye.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 20px;
+  top: 15px;
+  width: 65px;
+  height: 36px;
+  aspect-ratio: 1;
+  position: absolute;
+}
+
+.popularity_articles_dot_right {
+  background-color: #55DFB4;
+  position: relative;
+}
+
+.popularity_articles_dot_right::after {
+  content: "";
+  background-image: url("../images/Catalog.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 30px;
+  top: 5px;
+  width: 52px;
+  height: 48px;
+  aspect-ratio: 1;
+  position: absolute;
+}
+.popularity_articles p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+.popularity_articles_left, .popularity_articles_center, .popularity_articles_right {
+  width: 163px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .popularity_articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 100px 0;
+  }
+  .popularity {
+
+    h2 {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .popularity {
+  padding-top: 30px;
+  }
+}

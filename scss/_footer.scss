@@ -1,0 +1,31 @@
+@import "var";
+.footer {
+  max-width: $max_width;
+  padding:0 40px;
+  margin: 0 Auto;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -5px 40px #00000029;
+}
+
+.footer_logo h3 {
+  text-align: left;
+  padding-left: 0;
+}
+
+.footer_logo_copyRight {
+  font-size: 11px;
+  padding-bottom: 15px;
+  color: #A5A5A5;
+}
+
+.footer_icons {
+  width: 200px;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+
+}

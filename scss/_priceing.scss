@@ -1,0 +1,178 @@
+@import "settings";
+.pricing {
+  margin-top: 0px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.pricing h2 {
+  padding-bottom: 50px;
+}
+
+.pricing_list {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(14 / 16 * 1rem);
+}
+
+.btn {
+  display: block;
+  padding: 25px 30px;
+  width: 300px;
+  background-color: $Blue;
+  border-radius: 40px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.pricing_offers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.price_btn {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+  display: flex;
+}
+
+.price_btn--basic {
+  background-color: #EB476E;
+
+}
+.price_btn--pro {
+  background-color: #07ACE6;
+}
+
+.price_btn--premium {
+  background-color: #55DFB4;
+}
+
+.pricing_offers_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  height: 600px;
+  padding-top: 100px;
+  outline: 1px solid #07ACE6;
+  outline-offset: -30px;
+  border-radius: 50px;
+
+  h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: calc( 21 / 16 * 1rem);
+  }
+}
+
+.pricing_offers_box:hover {
+
+  outline: none;
+  border-radius: 20px;
+}
+
+.pricing_offers_box:hover > h3 {
+  padding-bottom: 20px;
+}
+
+.pricing_offers_box:hover > h4 {
+  padding-top: 0;
+}
+
+.pricing_offers_box:hover > .pricing_list {
+  gap: 30px;
+}
+
+.pricing_offers_box:hover > .price_btn {
+  bottom: -30px;
+  left: 140px;
+}
+
+.pricing_offers_basic {
+  outline-color: #EB476E;
+}
+
+.pricing_offers_basic:hover {
+  box-shadow: 0 0 15px 0 #EB476E;
+}
+
+.pricing_offers_premium {
+  outline-color: #55DFB4;
+}
+
+.pricing_offers_premium:hover {
+  box-shadow: 0 0 15px 0 #55DFB4;
+}
+
+.pricing_offers_pro {
+  outline-color: #07ACE6;
+}
+
+.pricing_offers_pro:hover {
+  box-shadow: 0px 0px 15px 0px #07ACE6;
+}
+
+.pricing_list li::marker {
+  content: url("../images/Ckechmark-1.svg");
+  letter-spacing: 5px;
+}
+
+.pricing_list li span {
+  display: inline-block;
+  width: 10px;
+}
+
+.limited_offer {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+.pricing_list li.pricing_list_negative::marker {
+  content: url("../images/Close.svg");
+  letter-spacing: 5px;
+}
+
+
+.price_btn {
+    width: 150px;
+    position: absolute;
+    bottom: -10px;
+    left: 140px;
+}
+
+.price_btn:hover {
+    width: 165px;
+}
+
+
+.pricing_list li span {
+  display: inline-block;
+  width: 10px;
+}
+
+.limited_offer {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
