@@ -273,6 +273,10 @@ img[alt="trumpet"] {
 
   .advantages_underline {
     width: 80%;
+    @media (max-width: 370px) {
+      display: none;
+    }
+
   }
 
   .advantages_bottom article {

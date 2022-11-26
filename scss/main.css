@@ -7,6 +7,11 @@
 html {
   font-size: 16px;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 body {
   background-color: #F7F7F7;
@@ -28,6 +33,11 @@ h2 {
   font-size: 2.25rem;
   padding: 0;
   font-weight: 400;
+}
+@media (max-width: 370px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -205,6 +215,11 @@ main .main_btn {
   text-decoration: none;
   text-align: center;
 }
+@media (max-width: 310px) {
+  main .main_btn {
+    border-radius: 0;
+  }
+}
 
 .main_img {
   width: 100%;
@@ -330,6 +345,9 @@ main .main_btn {
 @media (max-width: 600px) {
   .popularity {
     padding-top: 30px;
+  }
+  .popularity_articles {
+    gap: 30px;
   }
 }
 .advantages {
@@ -589,13 +607,24 @@ img[alt=trumpet] {
   .advantages_underline {
     width: 80%;
   }
+}
+@media (max-width: 650px) and (max-width: 370px) {
+  .advantages_underline {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
   .advantages_bottom article {
     width: 100%;
     min-width: unset;
   }
+}
+@media (max-width: 650px) {
   img[alt=iPhone] {
     height: auto;
   }
+}
+@media (max-width: 650px) {
   .advantages_center_iphone::before {
     width: 60%;
     height: unset;
@@ -625,6 +654,11 @@ img[alt=trumpet] {
 html {
   font-size: 16px;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 body {
   background-color: #F7F7F7;
@@ -646,6 +680,11 @@ h2 {
   font-size: 2.25rem;
   padding: 0;
   font-weight: 400;
+}
+@media (max-width: 370px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -708,9 +747,19 @@ ul {
   padding-top: 100px;
   padding-bottom: 40px;
 }
+@media (max-width: 500px) {
+  .pricing {
+    padding-top: 30px;
+  }
+}
 
 .pricing h2 {
   padding-bottom: 50px;
+}
+@media (max-width: 500px) {
+  .pricing h2 {
+    padding-bottom: 10px;
+  }
 }
 
 .pricing_list {
@@ -733,6 +782,11 @@ ul {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .btn {
+    padding: 15px 30px;
+  }
 }
 
 .pricing_offers {
@@ -775,6 +829,15 @@ ul {
   outline-offset: -30px;
   border-radius: 50px;
 }
+@media (max-width: 500px) {
+  .pricing_offers_box {
+    min-width: max(250px, 90%);
+    width: unset;
+    height: unset;
+    min-height: 375px;
+    padding-top: 40px;
+  }
+}
 .pricing_offers_box h4 {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -801,6 +864,12 @@ ul {
 .pricing_offers_box:hover > .price_btn {
   bottom: -30px;
   left: 140px;
+}
+@media (max-width: 500px) {
+  .pricing_offers_box:hover > .price_btn {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
 
 .pricing_offers_basic {
@@ -856,9 +925,12 @@ ul {
   bottom: -10px;
   left: 140px;
 }
-
-.price_btn:hover {
-  width: 165px;
+@media (max-width: 500px) {
+  .price_btn {
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+  }
 }
 
 .pricing_list li span {
@@ -879,12 +951,35 @@ ul {
   padding: 200px;
   justify-content: center;
   gap: 80px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+@media (max-width: 1400px) {
+  .questions {
+    padding: 100px 50px;
+    gap: 40px;
+  }
+}
+@media (max-width: 1080px) {
+  .questions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .questions {
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 .question_header {
-  font-size: 49px;
+  font-size: 3.0625rem;
   margin-top: 60px;
+}
+@media (max-width: 500px) {
+  .question_header {
+    padding-left: 10px;
+  }
 }
 
 .questions_adres p {
@@ -894,6 +989,26 @@ ul {
 }
 .questions_adres p span {
   color: #A5A5A5;
+}
+@media (max-width: 500px) {
+  .questions_adres p {
+    padding: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .questions_adres p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.question_icons {
+  display: flex;
+}
+@media (max-width: 440px) {
+  .question_icons {
+    flex-direction: column;
+  }
 }
 
 span.question_icons-mail {
@@ -905,12 +1020,27 @@ span.question_icons {
   display: inline-block;
   padding: 0 10px;
 }
+@media (max-width: 450px) {
+  span.question_icons {
+    padding-left: 0;
+  }
+}
 
 form {
   width: 650px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media (max-width: 1200px) {
+  form {
+    gap: 0;
+  }
+}
+@media (max-width: 800px) {
+  form {
+    width: unset;
+  }
 }
 
 label {
@@ -981,6 +1111,20 @@ span.checkbox {
   margin-bottom: 30px;
   letter-spacing: 3px;
 }
+@media (max-width: 1200px) {
+  .input_name {
+    padding: 30px;
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .input_name {
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 30px;
+  }
+}
 
 .input_name:focus {
   outline: none;
@@ -991,10 +1135,22 @@ span.checkbox {
 .question_btn {
   align-self: flex-end;
 }
+@media (max-width: 400px) {
+  .question_btn {
+    width: unset;
+    padding: 15px 90px;
+    align-self: center;
+  }
+}
 
 @media (max-width: 800px) {
   .questions {
     padding: 70px;
+  }
+}
+@media (max-width: 400px) {
+  .questions {
+    padding: 20px;
   }
 }
 .footer {
@@ -1007,6 +1163,12 @@ span.checkbox {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.1607843137);
+}
+@media (max-width: 370px) {
+  .footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .footer_logo h3 {

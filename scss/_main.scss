@@ -43,6 +43,10 @@ main {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+
+    @media (max-width: 310px) {
+      border-radius: 0;
+    }
   }
 }
 

@@ -4,12 +4,28 @@
   padding: 200px;
   justify-content: center;
   gap: 80px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  @media (max-width: 1400px){
+    padding: 100px 50px;
+    gap: 40px;
+  }
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 500px) {
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 .question_header {
-  font-size: 49px;
+  font-size: calc(49 / 16 * 1rem);
   margin-top: 60px;
+  @media (max-width: 500px) {
+    padding-left: 10px;
+    
+  }
 }
 
 .questions_adres p {
@@ -19,8 +35,23 @@
   span {
     color: #A5A5A5;
   }
+
+  @media (max-width: 500px) {
+    padding: 10px;
+  }
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+    //align-content: center;
+    }
 }
 
+.question_icons {
+  display: flex;
+  @media (max-width: 440px) {
+    flex-direction: column;
+  }
+}
 span.question_icons-mail {
   display: inline-block;
   padding-right: 10px;
@@ -28,7 +59,12 @@ span.question_icons-mail {
 span.question_icons {
   display: inline-block;
   padding: 0 10px;
+  @media (max-width: 450px) {
+    padding-left: 0;
+  }
 }
+
+
 
 
 form {
@@ -36,6 +72,14 @@ form {
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (max-width: 1200px) {
+    gap: 0;
+  }
+
+  @media (max-width: 800px) {
+    width: unset;
+  }
 }
 
 label {
@@ -104,6 +148,19 @@ span.checkbox {
   color: hsl(197deg 92% 25%);
   margin-bottom: 30px;
   letter-spacing: 3px;
+
+  @media (max-width: 1200px) {
+    padding: 30px;
+    width: 100%;
+  }
+  @media (max-width: 400px) {
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 30px;
+  }
+
+
 }
 
 .input_name:focus {
@@ -115,10 +172,21 @@ span.checkbox {
 
 .question_btn {
   align-self: flex-end;
+  @media (max-width: 400px) {
+    width: unset;
+    padding: 15px 90px;
+    align-self: center;
+  }
 }
 
 @media (max-width: 800px) {
   .questions {
     padding: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  .questions {
+    padding: 20px;
   }
 }

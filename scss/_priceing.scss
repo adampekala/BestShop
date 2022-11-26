@@ -5,10 +5,18 @@
   align-items: center;
   padding-top: 100px;
   padding-bottom: 40px;
+  
+  @media (max-width: 500px) {
+    padding-top: 30px;
+  }
 }
 
 .pricing h2 {
   padding-bottom: 50px;
+  @media (max-width: 500px) {
+    padding-bottom: 10px;
+    
+  }
 }
 
 .pricing_list {
@@ -31,6 +39,9 @@
   font-weight: bold;
   text-decoration: none;
   text-align: center;
+  @media (max-width: 500px) {
+    padding: 15px 30px;
+  }
 }
 
 .pricing_offers {
@@ -73,6 +84,14 @@
   outline-offset: -30px;
   border-radius: 50px;
 
+  @media (max-width: 500px) {
+    min-width: max(250px, 90%);
+    width: unset;
+    height: unset;
+    min-height: 375px;
+    padding-top: 40px;
+  }
+
   h4 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -101,6 +120,10 @@
 .pricing_offers_box:hover > .price_btn {
   bottom: -30px;
   left: 140px;
+  @media (max-width: 500px) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
 
 .pricing_offers_basic {
@@ -155,11 +178,16 @@
     position: absolute;
     bottom: -10px;
     left: 140px;
+  @media (max-width: 500px) {
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+  }
 }
 
-.price_btn:hover {
-    width: 165px;
-}
+//.price_btn:hover {
+//    width: 165px;
+//}
 
 
 .pricing_list li span {
