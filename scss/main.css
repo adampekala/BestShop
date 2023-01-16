@@ -946,6 +946,66 @@ ul {
   font-weight: 800;
 }
 
+.calculator-section {
+  background-color: #F7F7F7;
+}
+
+.calculator-section h2 {
+  padding-top: 40px;
+  text-align: center;
+  border-color: #F7F7F7;
+}
+
+.calculator {
+  width: 100vw;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 850px) {
+  .calculator {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.calculator form {
+  width: 400px;
+  padding-top: 10px;
+  gap: 20px;
+}
+.calculator form input {
+  padding: 10px;
+  padding-left: 20px;
+  border: 1px solid #08A6E4;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #08A6E4;
+}
+.calculator form select {
+  padding: 10px 15px;
+  border: 1px solid #08A6E4;
+  border-radius: 5px;
+}
+.calculator .calculator_calculator {
+  width: 380px;
+}
+.calculator .calculator_calculator div {
+  background-color: #55DFB4;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  color: white;
+  font-size: 14px;
+  font-family: Open Sans, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+.calculator .calculator_calculator div span {
+  display: block;
+}
+.calculator .calculator_calculator div span:last-child {
+  font-weight: bold;
+}
+
 .questions {
   max-width: 1600px;
   padding: 200px;

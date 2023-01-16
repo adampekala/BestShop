@@ -130,7 +130,54 @@
                     <a href="#" class="btn price_btn price_btn--premium">Begin</a>
                 </div>
             </div>
+<!--            TODO-->
+            <div class="calculator-section">
+                <h2 class="calculator_header">Calculate how much you’ll pay</h2>
+                <div class="calculator">
+                    <form action="#" method="#" class="calculator_form">
+                        <input type="number" class="calculator_form-quantity" id="quantity" placeholder="Products quantity">
+                        <input type="number" class="calculator_form-months" id="months" placeholder="Estimated orders in month">
+                        <select name="package" id="package" class="calculator_form-package">
+                            <option value="basic" class="package_basic" id="basic">Basic</option>
+                            <option value="professional" class="package_professional" id="professional">Professional</option>
+                            <option value="premium" class="package_premium" id="premium">Premium</option>
+                        </select>
+                        <label for="accounting">
+                            <input id="accounting" type="checkbox" class="calculator_form-checkbox1">Accounting
+                        </label>
+                        <label>
+                            <input type="checkbox" name="rental" value="1"  class="calculator_form-checkbox2">Rental of a payment terminal
+                        </label>
+                    </form>
+                    <div class="calculator_calculator" id="calculator">
+                        <div class="calculator_quantity" id="quantityCalc">
+                            <span class="calculator_quantity-product">Products</span>
+                            <span class="calculator_quantity-multiply">khkjhj</span>
+                            <span class="calculator_quantity-price">$3232</span>
+                        </div>
+                        <div class="calculator_months" id="monthsCalc">
+                            <span class="calculator_months-orders">Orders</span>
+                            <span class="calculator_months-multiply">khkjhj</span>
+                            <span class="calculator_months-price">$3232</span>
+                        </div>
+                        <div class="calculator_package" id="packageCalc">
+                            <span class="calculator_package-package">Package</span>
+                            <span class="calculator_package-name">Premium</span>
+                            <span class="calculator_package-price">$3232</span>
+                        </div>
+                        <div class="calculator_accounting" id="accountingCalc">
+                            <span class="calculator_accounting-name">Accounting</span>
+                            <span class="calculator_accounting-price">$3232</span>
+                        </div>
+                        <div class="calculator_rental" id="rentaCalc">
+                            <span class="calculator_rental-name">Terminal</span>
+                            <span class="calculator_rental-price">$3232</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section class="questions">
             <article class="questions_adres">
                 <h2 class="question_header">
