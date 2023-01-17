@@ -130,23 +130,31 @@
                     <a href="#" class="btn price_btn price_btn--premium">Begin</a>
                 </div>
             </div>
-<!--            TODO-->
+<!--TODO calculator section-->
             <div class="calculator-section">
                 <h2 class="calculator_header">Calculate how much you’ll pay</h2>
                 <div class="calculator">
                     <form action="#" method="#" class="calculator_form">
                         <input type="number" class="calculator_form-quantity" id="quantity" placeholder="Products quantity">
-                        <input type="number" class="calculator_form-months" id="months" placeholder="Estimated orders in month">
-                        <select name="package" id="package" class="calculator_form-package">
-                            <option value="basic" class="package_basic" id="basic">Basic</option>
-                            <option value="professional" class="package_professional" id="professional">Professional</option>
-                            <option value="premium" class="package_premium" id="premium">Premium</option>
-                        </select>
+                        <input type="number" class="calculator_form-months" id="months" min="1" step="1" placeholder="Estimated orders in month">
+<!--                       TODO-->
+                        <div class="calculator_form_select-Div"><span id="selectChoice"> Wybierz pakiet </span><span class="calculator_form_select-Div-arrow" id="select-DivArrow"></span>
+                            <select name="package" id="package" class="calculator_form-package">
+                                <option value="basic" class="package_basic" id="basic">Basic</option>
+                                <option value="professional" class="package_professional" id="professional">Professional</option>
+                                <option value="premium" class="package_premium" id="premium">Premium</option>
+                            </select>
+                            <div class="calculator_form_select-menu d-none" id="selectMenu">
+                                <p class="calculator_form_select-menuOpt1" id="selectMenuBasic">Basic</p>
+                                <p class="calculator_form_select-menuOpt2" id="selectMenuProfessional">Professional</p>
+                                <p class="calculator_form_select-menuOpt3" id="selectMenuPremium">Premium</p>
+                            </div>
+                        </div>
                         <label for="accounting">
-                            <input id="accounting" type="checkbox" class="calculator_form-checkbox1">Accounting
+                            <input id="accounting" type="checkbox" class="calculator_form-checkbox1"><span class="checkbox"></span> Accounting
                         </label>
                         <label>
-                            <input type="checkbox" name="rental" value="1"  class="calculator_form-checkbox2">Rental of a payment terminal
+                            <input type="checkbox" name="rental" value="1"  class="calculator_form-checkbox2"><span class="checkbox">Rental of a payment terminal
                         </label>
                     </form>
                     <div class="calculator_calculator" id="calculator">
