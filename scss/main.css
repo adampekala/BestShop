@@ -969,7 +969,7 @@ ul {
   }
 }
 .calculator form {
-  width: 400px;
+  width: min(50vw, 400px);
   padding-top: 10px;
   padding-bottom: 60px;
 }
@@ -984,7 +984,7 @@ ul {
   padding-left: 20px;
   border: 1px solid #08A6E4;
   border-radius: 5px;
-  box-shadow: 0 1px 5px #08A6E4;
+  box-shadow: 2px 2px 1px rgba(8, 166, 228, 0.1607843137);
 }
 .calculator form label {
   margin: 0;
@@ -1024,14 +1024,19 @@ ul {
   margin-top: 20px;
   margin-left: auto;
   margin-right: 0;
+  display: flex;
+  align-items: center;
   width: 40%;
-  justify-content: right;
+  justify-content: space-between;
   gap: 5px;
 }
 @media (max-width: 850px) {
   .calculator .calculator_calculator .calculator_sum {
     margin-bottom: 20px;
   }
+}
+.calculator .calculator_calculator .calculator_sum span:last-child {
+  font-size: 20px;
 }
 .calculator .calculator_calculator .calculator_quantity.d-none, .calculator .calculator_calculator .calculator_months.d-none, .calculator .calculator_calculator .calculator_package.d-none, .calculator .calculator_calculator .calculator_accounting.d-none, .calculator .calculator_calculator .calculator_rental.d-none {
   display: none;
@@ -1049,7 +1054,8 @@ ul {
   padding: 10px 20px;
   border: 1px solid #08A6E4;
   border-radius: 5px;
-  box-shadow: 0 1px 5px #08A6E4;
+  background-color: white;
+  box-shadow: 2px 2px 1px rgba(8, 166, 228, 0.1607843137);
   font-size: 16px;
   font-family: Arial, sans-serif;
   color: rgb(35, 35, 35);

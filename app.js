@@ -8,6 +8,12 @@ btn.onclick = function () {
 
 //todo pojawianie się wyników
 
+let package = 0;
+let accounting = 0;
+let rental = 0;
+
+const total = document.getElementById("sumCalc");
+
 const quantityBtn = document.getElementById("quantity");
 const quantityOutput = document.getElementById("quantityCalc");
 const quantityOutputLastSpan = quantityOutput.lastElementChild;
@@ -24,11 +30,13 @@ function showQuantity (){
     quantityOutput.classList.remove("d-none");
     quantityOutputMiddleSpan.innerText = `${quantityBtn.value}  * $1.5`;
     quantityOutputLastSpan.innerText = `$${quantityBtn.value * 1.5}`;
+    total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
 }
 function showMonths (){
     monthsOutput.classList.remove("d-none");
     monthsOutputMiddleSpan.innerText = `${monthsBtn.value}  * $0.25`;
     monthsOutputLastSpan.innerText = `$${monthsBtn.value * 0.25}`;
+    total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
 }
 
 
@@ -78,15 +86,21 @@ function showPackage () {
     selectOutput.classList.remove("d-none");
     if(btnSelect.firstChild.innerText === "Basic"){
         selectOutputCentralSpan.innerText = "BASIC";
+        package = 10;
         selectOutputLastSpan.innerText = "$10";
+        total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
     }
     if(btnSelect.firstChild.innerText === "Professional"){
         selectOutputCentralSpan.innerText = "PROFESSIONAL";
+        package = 20;
         selectOutputLastSpan.innerText = "$20";
+        total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
     }
     if(btnSelect.firstChild.innerText === "Premium"){
         selectOutputCentralSpan.innerText = "PREMIUM";
+        package = 50;
         selectOutputLastSpan.innerText = "$50";
+        total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
     }
 }
 
@@ -105,23 +119,44 @@ checkAccounting.addEventListener("click", showAccountingOutput);
 
 function showAccountingOutput () {
     checkAccountingOutput.classList.toggle("d-none");
-    checkAccountingOutput.lastElementChild.innerText = "$35";
+    if(checkAccountingOutput.lastElementChild.innerText !== "$35") {
+        checkAccountingOutput.lastElementChild.innerText = "$35";
+        accounting = 35;
+    }
+    else {
+        checkAccountingOutput.lastElementChild.innerText = "$0";
+        accounting = 0;
+    }
+    total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
 }
 
 checkRental.addEventListener("click", showRentalOutput);
 
 function showRentalOutput () {
     checkRentalOutput.classList.toggle("d-none");
+    if(checkRentalOutput.lastElementChild.innerText !== "$5") {
+        checkRentalOutput.lastElementChild.innerText = "$5";
+        rental = 5;
+    }
+    else {
+        checkRentalOutput.lastElementChild.innerText = "$0";
+        rental = 0;
+    }
+    total.lastElementChild.innerText = `$${(quantityBtn.value * 1.5) + (monthsBtn.value * 0.25) + package + accounting + rental}`;
 
-    checkRentalOutput.lastElementChild.innerText = "$5";
-    //TODO
-    // if(checkRentalOutput.lastElementChild.innerText === "$5") {
-    //     checkRentalOutput.lastElementChild.innerText = "$0"
-    // }
 }
 
+//TODO kalkulator
+
+console.log(quantityOutputLastSpan.innerText);
+console.log(monthsOutputLastSpan.innerText);
+console.log(selectOutputLastSpan.innerText);
+console.log(checkRentalOutput.lastElementChild.innerText);
+console.log(checkAccountingOutput.lastElementChild.innerText);
 
 
+
+console.log(total);
 
 
 

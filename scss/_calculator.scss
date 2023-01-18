@@ -18,7 +18,8 @@
     align-items: center;
   }
   form {
-    width: 400px;
+    //todo szerokość imputów
+    width: min(50vw, 400px);
     padding-top: 10px;
     padding-bottom: 60px;
     @media (max-width: 850px) {
@@ -31,7 +32,7 @@
       padding-left: 20px;
       border: 1px solid #08A6E4;
       border-radius: 5px;
-      box-shadow: 0 1px 5px #08A6E4;
+      box-shadow: 2px 2px 1px #08A6E429;
     }
     label {
       margin: 0;
@@ -74,12 +75,17 @@
       margin-top: 20px;
       margin-left: auto;
       margin-right: 0;
+      display: flex;
+      align-items: center;
       @media (max-width: 850px) {
         margin-bottom: 20px;
       }
       width: 40%;
-      justify-content: right;
+      justify-content: space-between;
       gap: 5px;
+      span:last-child {
+        font-size: 20px;
+      }
     }
 
     .calculator_quantity.d-none, .calculator_months.d-none, .calculator_package.d-none, .calculator_accounting.d-none, .calculator_rental.d-none {
@@ -101,7 +107,8 @@
   padding: 10px 20px;
   border: 1px solid #08A6E4;
   border-radius: 5px;
-  box-shadow: 0 1px 5px #08A6E4;
+  background-color: white;
+  box-shadow: 2px 2px 1px #08A6E429;
   font-size: 16px;
   font-family: Arial, sans-serif;
   color: rgb(35, 35, 35);
