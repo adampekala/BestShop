@@ -48,6 +48,9 @@
         }
       }
     }
+    .calculator_quantity.d-none, .calculator_months.d-none, .calculator_package.d-none, .calculator_accounting.d-none, .calculator_rental.d-none {
+      display: none;
+    }
   }
 }
 

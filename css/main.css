@@ -1000,6 +1000,9 @@ ul {
 .calculator .calculator_calculator div span:last-child {
   font-weight: bold;
 }
+.calculator .calculator_calculator .calculator_quantity.d-none, .calculator .calculator_calculator .calculator_months.d-none, .calculator .calculator_calculator .calculator_package.d-none, .calculator .calculator_calculator .calculator_accounting.d-none, .calculator .calculator_calculator .calculator_rental.d-none {
+  display: none;
+}
 
 .calculator_form_select-Div {
   padding: 10px 20px;

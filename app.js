@@ -6,14 +6,33 @@ btn.onclick = function () {
     nav.classList.toggle("is_show");
 }
 
-//todo
+//todo pojawianie się wyników
 
-const btnQuantity = document.getElementById("quantity");
-if (btnQuantity.value < 0) {
-    console.log(btnQuantity.value);;
+const quantityBtn = document.getElementById("quantity");
+const quantityOutput = document.getElementById("quantityCalc");
+const quantityOutputLastSpan = quantityOutput.lastElementChild;
+const quantityOutputMiddleSpan = quantityOutputLastSpan.previousElementSibling;
+const monthsBtn = document.getElementById("months");
+const monthsOutput = document.getElementById("monthsCalc");
+const monthsOutputLastSpan = monthsOutput.lastElementChild;
+const monthsOutputMiddleSpan = monthsOutputLastSpan.previousElementSibling;
+
+quantityBtn.addEventListener("change", showQuantity);
+monthsBtn.addEventListener("change", showMonths);
+
+function showQuantity (){
+    quantityOutput.classList.remove("d-none");
+    quantityOutputMiddleSpan.innerText = `${quantityBtn.value}  * $1.5`;
+    quantityOutputLastSpan.innerText = `$ ${quantityBtn.value * 1.5}`;
+}
+function showMonths (){
+    monthsOutput.classList.remove("d-none");
+    monthsOutputMiddleSpan.innerText = `${monthsBtn.value}  * $0.25`;
+    monthsOutputLastSpan.innerText = `$ ${monthsBtn.value * 0.25}`;
 }
 
-//todo klikanie w selekta
+
+//SELECT: DZIAŁANIE
 
 const btnSelect = document.querySelector(".calculator_form_select-Div");
 const selectArrow = btnSelect.querySelector("#select-DivArrow");
@@ -49,6 +68,29 @@ function premiumChoice (){
     console.log(btnSelect.target);
     btnSelect.firstChild.innerText = "Premium";
 }
+
+//Działanie selectOutput po wybraniu pakietu
+const selectOutput = document.getElementById("packageCalc");
+const selectOutputCentralSpan = selectOutput.querySelector(".calculator_package-name")
+const selectOutputLastSpan = selectOutputCentralSpan.nextElementSibling;
+selectMenu.addEventListener("click", showPackage);
+function showPackage () {
+    selectOutput.classList.remove("d-none");
+    if(btnSelect.firstChild.innerText === "Basic"){
+        selectOutputCentralSpan.innerText = "BASIC";
+        selectOutputLastSpan.innerText = "$10";
+    }
+    if(btnSelect.firstChild.innerText === "Professional"){
+        selectOutputCentralSpan.innerText = "PROFESSIONAL";
+        selectOutputLastSpan.innerText = "$20";
+    }
+    if(btnSelect.firstChild.innerText === "Premium"){
+        selectOutputCentralSpan.innerText = "PREMIUM";
+        selectOutputLastSpan.innerText = "$50";
+    }
+}
+
+//TODO połączenie wyborów z wysuwanego menu z selectem
 
 
 
