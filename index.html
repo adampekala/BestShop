@@ -153,8 +153,8 @@
                         <label for="accounting">
                             <input id="accounting" type="checkbox" class="calculator_form-checkbox1"><span class="checkbox"></span> Accounting
                         </label>
-                        <label>
-                            <input type="checkbox" name="rental" value="1"  class="calculator_form-checkbox2"><span class="checkbox"></span>Rental of a payment terminal
+                        <label for="rental">
+                            <input id="rental" type="checkbox" name="rental" value="1"  class="calculator_form-checkbox2"><span class="checkbox"></span>Rental of a payment terminal
                         </label>
                     </form>
                     <div class="calculator_calculator" id="calculator">
@@ -180,6 +180,9 @@
                         <div class="calculator_rental d-none" id="rentaCalc">
                             <span class="calculator_rental-name">Terminal</span>
                             <span class="calculator_rental-price">$3232</span>
+                        </div>
+                        <div class="calculator_sum" id="sumCalc">
+                            <span>Total</span><span id="sumCalcSpan">$0</span>
                         </div>
                     </div>
                 </div>

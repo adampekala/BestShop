@@ -971,23 +971,42 @@ ul {
 .calculator form {
   width: 400px;
   padding-top: 10px;
-  gap: 20px;
+  padding-bottom: 60px;
+}
+@media (max-width: 850px) {
+  .calculator form {
+    padding-bottom: 30px;
+  }
 }
 .calculator form input {
+  margin-bottom: 20px;
   padding: 10px;
   padding-left: 20px;
   border: 1px solid #08A6E4;
   border-radius: 5px;
   box-shadow: 0 1px 5px #08A6E4;
 }
+.calculator form label {
+  margin: 0;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.calculator form label span {
+  width: 20px;
+  height: 20px;
+}
 .calculator .calculator_calculator {
   width: 380px;
+  display: flex;
+  flex-direction: column;
 }
 .calculator .calculator_calculator div {
+  width: 100%;
   background-color: #55DFB4;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px auto;
+  margin: 10px auto 0;
   color: white;
   font-size: 14px;
   font-family: Open Sans, sans-serif;
@@ -1000,11 +1019,33 @@ ul {
 .calculator .calculator_calculator div span:last-child {
   font-weight: bold;
 }
+.calculator .calculator_calculator .calculator_sum {
+  background-color: #08A6E4;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 0;
+  width: 40%;
+  justify-content: right;
+  gap: 5px;
+}
+@media (max-width: 850px) {
+  .calculator .calculator_calculator .calculator_sum {
+    margin-bottom: 20px;
+  }
+}
 .calculator .calculator_calculator .calculator_quantity.d-none, .calculator .calculator_calculator .calculator_months.d-none, .calculator .calculator_calculator .calculator_package.d-none, .calculator .calculator_calculator .calculator_accounting.d-none, .calculator .calculator_calculator .calculator_rental.d-none {
   display: none;
 }
 
+.calculator_form input:checked + span {
+  background-image: url("../images/Checkmark.svg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+
 .calculator_form_select-Div {
+  margin-bottom: 20px;
   padding: 10px 20px;
   border: 1px solid #08A6E4;
   border-radius: 5px;
@@ -1041,6 +1082,7 @@ ul {
   box-shadow: 0 1px 5px #EB476E;
   left: 0;
   top: 50px;
+  z-index: 2;
 }
 .calculator_form_select-Div .calculator_form_select-menu p {
   padding: 10px 10px;

@@ -23,12 +23,12 @@ monthsBtn.addEventListener("change", showMonths);
 function showQuantity (){
     quantityOutput.classList.remove("d-none");
     quantityOutputMiddleSpan.innerText = `${quantityBtn.value}  * $1.5`;
-    quantityOutputLastSpan.innerText = `$ ${quantityBtn.value * 1.5}`;
+    quantityOutputLastSpan.innerText = `$${quantityBtn.value * 1.5}`;
 }
 function showMonths (){
     monthsOutput.classList.remove("d-none");
     monthsOutputMiddleSpan.innerText = `${monthsBtn.value}  * $0.25`;
-    monthsOutputLastSpan.innerText = `$ ${monthsBtn.value * 0.25}`;
+    monthsOutputLastSpan.innerText = `$${monthsBtn.value * 0.25}`;
 }
 
 
@@ -91,6 +91,35 @@ function showPackage () {
 }
 
 //TODO połączenie wyborów z wysuwanego menu z selectem
+
+//TODO działanie checkbox's
+
+const checkAccounting = document.getElementById("accounting");
+// const checkAccountingParent = checkAccounting.parentElement;
+
+const checkRental = document.getElementById("rental");
+const checkAccountingOutput = document.getElementById("accountingCalc");
+const checkRentalOutput = document.getElementById("rentaCalc");
+
+checkAccounting.addEventListener("click", showAccountingOutput);
+
+function showAccountingOutput () {
+    checkAccountingOutput.classList.toggle("d-none");
+    checkAccountingOutput.lastElementChild.innerText = "$35";
+}
+
+checkRental.addEventListener("click", showRentalOutput);
+
+function showRentalOutput () {
+    checkRentalOutput.classList.toggle("d-none");
+
+    checkRentalOutput.lastElementChild.innerText = "$5";
+    //TODO
+    // if(checkRentalOutput.lastElementChild.innerText === "$5") {
+    //     checkRentalOutput.lastElementChild.innerText = "$0"
+    // }
+}
+
 
 
 
