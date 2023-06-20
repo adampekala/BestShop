@@ -172,6 +172,10 @@ span.checkbox {
 
 .question_btn {
   align-self: flex-end;
+  border: 2px solid #08A6E4;
+  &:hover {
+    background-color: darken(#08A6E4, 2%);
+  }
   @media (max-width: 400px) {
     width: unset;
     padding: 15px 90px;
