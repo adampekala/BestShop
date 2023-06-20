@@ -20,7 +20,6 @@
 .nav_burger {
   width: 60px;
   height: 60px;
-  display: flex;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -43,6 +42,19 @@
   }
 
 }
+
+.nav_burger.is_show {
+  span:nth-child(2) {
+    transform: rotate(45deg) translate(2px, 3px);
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+  span:last-child {
+    display: none;
+  }
+}
+
 
 .nav_menu {
   list-style-type: none;
