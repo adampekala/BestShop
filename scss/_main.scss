@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "var";
 
 section, main {
@@ -43,6 +44,12 @@ main {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+    border: 2px solid #08A6E4;
+
+    &:hover {
+      background-color: darken(#08A6E4, 2%);
+
+    }
 
     @media (max-width: 310px) {
       border-radius: 0;
