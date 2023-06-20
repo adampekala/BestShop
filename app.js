@@ -4,6 +4,7 @@ const nav = document.querySelector(".nav_menu");
 
 btn.onclick = function () {
     nav.classList.toggle("is_show");
+    btn.classList.toggle("is_show")
 }
 
 //todo pojawianie się wyników
